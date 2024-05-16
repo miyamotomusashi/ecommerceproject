@@ -6,6 +6,7 @@ import { Categories } from './components/Layout/Categories/Categories'
 import Footer from './components/Layout/Footer/Footer'
 import Header from './components/Layout/Header/Header'
 import { Policy } from './components/Layout/Policy/Policy'
+import Product from './components/Layout/Products/Product'
 import { Slider } from './components/Layout/Slider/Slider'
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Slider />
         <Categories />
+        <Product />
         <h1>Hello</h1>
         <Policy />
         <Footer />
