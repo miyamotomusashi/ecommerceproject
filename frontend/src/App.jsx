@@ -9,6 +9,7 @@ import { Policy } from './components/Layout/Policy/Policy'
 import Product from './components/Layout/Products/Product'
 import { Slider } from './components/Layout/Slider/Slider'
 import './App.css'
+import Campaigns from './components/Layout/Campaigns/Campaigns'
 function App() {
     return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Slider />
         <Categories />
         <Product />
+        <Campaigns/>
         <h1>Hello</h1>
         <Policy />
         <Footer />
