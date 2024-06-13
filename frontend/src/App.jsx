@@ -8,13 +8,18 @@ import HomePage from './pages/HomePage'
 import ShopPage from './pages/ShopPage'
 
 import AuthPage from './pages/AuthPage'
+import CardPage from './pages/CardPage'
+import  BlogDetail  from "./pages/BlogDetailPage";
 function App() {
   return (
     <React.Fragment>
       {/* <HomePage /> */}
        {/* <ShopPage /> */}
         {/* <ContactPage/> */}
-      <AuthPage/>
+        {/* <CardPage/> */}
+      {/* <AuthPage/> */}
+      <BlogDetail/>
+      {/* <BlogPage/> */}
     </React.Fragment>
 
 
