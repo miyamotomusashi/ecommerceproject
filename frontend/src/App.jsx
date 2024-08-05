@@ -3,25 +3,15 @@
 //import viteLogo from '/vite.svg'
 import React from 'react'
 import './App.css'
-import ContactPage from './pages/ContactPage'
-import HomePage from './pages/HomePage'
-import ShopPage from './pages/ShopPage'
 
-import AuthPage from './pages/AuthPage'
-import CardPage from './pages/CardPage'
-import  BlogDetail  from "./pages/BlogDetailPage";
 import ProductDetailsPage from './pages/ProductDetailsPage';
+import HomePage from './pages/HomePage';
 function App() {
   return (
     <React.Fragment>
-      {/* <HomePage /> */}
-       {/* <ShopPage /> */}
-        {/* <ContactPage/> */}
-        {/* <CardPage/> */}
-      {/* <AuthPage/> */}
-      {/* <BlogDetail/> */}
-      <ProductDetailsPage />
-      {/* <BlogPage/> */}
+      <HomePage/>
+      {/* <ProductDetailsPage /> */}
+    
     </React.Fragment>
 
 

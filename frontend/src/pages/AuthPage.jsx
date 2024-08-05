@@ -1,15 +1,11 @@
-import { Fragment } from "react"
-import Auth from "../components/Auth/Auth"
-import Footer from "../components/Footer/Footer"
-import Header from "../components/Header/Header"
+import { Fragment } from "react";
+import Auth from "../components/Auth/Auth";
 
 const AuthPage = () => {
-    return (
-        <Fragment>
-            <Header />
-            <Auth />
-            <Footer />
-        </Fragment>
-    )
-}
-export default AuthPage
+  return (
+    <Fragment>
+      <Auth />
+    </Fragment>
+  );
+};
+export default AuthPage;

@@ -1,9 +1,7 @@
 
 import React from "react"
  import { Categories } from '../components/Categories/Categories'
- import Footer from '../components/Footer/Footer'
- import Header from '../components/Header/Header'
- import { Policy } from '../components/Policy/Policy'
+  import { Policy } from '../components/Policy/Policy'
  import Product from '../components/Products/Product'
  import { Slider } from '../components/Slider/Slider'
  import Campaigns from '../components/Campaigns/Campaigns'
@@ -12,7 +10,6 @@ import React from "react"
  import Campaignsingle from '../components/Campaignsingle/Campaignsingle'
 const HomePage = () => (
     <React.Fragment>
-        <Header />
         <Slider />
         <Categories />
         <Product />
@@ -22,7 +19,6 @@ const HomePage = () => (
         <Brands />
         <Campaignsingle />
         <Policy />
-        <Footer />
     </React.Fragment>
 )
 
