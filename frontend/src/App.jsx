@@ -10,6 +10,7 @@ import ShopPage from './pages/ShopPage'
 import AuthPage from './pages/AuthPage'
 import CardPage from './pages/CardPage'
 import  BlogDetail  from "./pages/BlogDetailPage";
+import ProductDetailsPage from './pages/ProductDetailsPage';
 function App() {
   return (
     <React.Fragment>
@@ -18,7 +19,8 @@ function App() {
         {/* <ContactPage/> */}
         {/* <CardPage/> */}
       {/* <AuthPage/> */}
-      <BlogDetail/>
+      {/* <BlogDetail/> */}
+      <ProductDetailsPage />
       {/* <BlogPage/> */}
     </React.Fragment>
 
