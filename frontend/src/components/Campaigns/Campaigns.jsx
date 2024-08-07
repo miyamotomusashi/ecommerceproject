@@ -1,25 +1,8 @@
-import './Campaigns.css'
-import CampaignItem from "./CampaignItem";
+const Campaigns = () =>{
 
-const Campaigns = () => {
-    return (
-        <section className="campaigns">
-            <div className="container">
-                <div className="campaigns-wrapper">
-                    <CampaignItem />
-                    <CampaignItem />
-
-                </div>
-                <div className="campaigns-wrapper">
-                    <CampaignItem />
-                    <CampaignItem />
-
-                </div>
-            </div>
-        </section>
-
-    );
-
-}
+    return(
+<div>asasasa</div>
+    )
+};
 
 export default Campaigns;
