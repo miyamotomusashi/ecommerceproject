@@ -1,7 +1,13 @@
 import ProductItem from "./ProductItem";
 import "./Products.css";
+import PropTypes from 'prop-types'
+import { useState } from "react";
+import ProductsData from "../../data.json";
 
 const Product = () => {
+    const [products] = useState(ProductsData);
+    const [cartItems, setCardItems] = useState([]);
+    console.log(cartItems.length);
     return (<section className="products">
         <div className="container">
             <div className="section-title">
@@ -11,11 +17,9 @@ const Product = () => {
             <div className="product-wrapper product-carousel">
                 <div className="glide__track" data-glide-el="track">
                     <ul className="product-list glide__slides" id="product-list">
-                        <ProductItem />
-                        <ProductItem />
-                        <ProductItem />
-                        <ProductItem />
-
+                        {products.map((product) => (
+                            <ProductItem productItem={product} setCardItems={setCardItems} key={product.id} />
+                        ))}
                     </ul>
                 </div>
                 <div className="glide__arrows" data-glide-el="controls">
@@ -32,3 +36,8 @@ const Product = () => {
 }
 
 export default Product;
+
+Product.propTypes = {
+    productItem: PropTypes.object,
+    setCardItems: PropTypes.func
+}
