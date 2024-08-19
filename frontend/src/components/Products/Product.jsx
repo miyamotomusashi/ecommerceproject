@@ -1,13 +1,15 @@
 import ProductItem from "./ProductItem";
 import "./Products.css";
 import PropTypes from 'prop-types'
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ProductsData from "../../data.json";
+
 
 const Product = () => {
     const [products] = useState(ProductsData);
-    const [cartItems, setCardItems] = useState([]);
-    console.log(cartItems.length);
+
+    
+
     return (<section className="products">
         <div className="container">
             <div className="section-title">
@@ -18,7 +20,7 @@ const Product = () => {
                 <div className="glide__track" data-glide-el="track">
                     <ul className="product-list glide__slides" id="product-list">
                         {products.map((product) => (
-                            <ProductItem productItem={product} setCardItems={setCardItems} key={product.id} />
+                            <ProductItem productItem={product} key={product.id} />
                         ))}
                     </ul>
                 </div>

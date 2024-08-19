@@ -2,12 +2,9 @@
 import { useContext } from "react";
 import "./ProductItem.css";
 import PropTypes from 'prop-types';
-import {CardContext} from '../../context/CardProvider'
-const ProductItem = ({ productItem, setCardItems }) => {
-    const { productname } = useContext(CardContext);
-    const addToCard = (productItem) => {
-        setCardItems((prevItems) => [...prevItems, productItem]);
-    }
+import { CardContext } from '../../context/CardProvider'
+const ProductItem = ({ productItem }) => {
+    const {addToCard} = useContext(CardContext);   
 
     return (
         <li className="product-item glide__slide glide__slide--active" >
@@ -20,8 +17,6 @@ const ProductItem = ({ productItem, setCardItems }) => {
             <div className="product-info">
                 <a href="$" className="product-title">
                     {productItem.name}
-                    <br />
-                    Data: {productname}
                 </a>
                 <ul className="product-star">
                     <li>
