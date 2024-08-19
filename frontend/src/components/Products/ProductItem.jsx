@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import "./ProductItem.css";
 import PropTypes from 'prop-types';
-import CardContext from '../../context/CardProvider'
+import {CardContext} from '../../context/CardProvider'
 const ProductItem = ({ productItem, setCardItems }) => {
     const { productname } = useContext(CardContext);
     const addToCard = (productItem) => {
@@ -21,7 +21,7 @@ const ProductItem = ({ productItem, setCardItems }) => {
                 <a href="$" className="product-title">
                     {productItem.name}
                     <br />
-                    {/* Data: {name} */}
+                    Data: {productname}
                 </a>
                 <ul className="product-star">
                     <li>

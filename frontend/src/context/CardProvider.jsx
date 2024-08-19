@@ -7,7 +7,7 @@ const CardProvider = ({ children }) => {
   return (
     <CardContext.Provider
       value={{
-        productname: "emin"
+        productname: 'emin'
       }}
     >
       { children }
