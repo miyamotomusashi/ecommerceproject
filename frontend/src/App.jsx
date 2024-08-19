@@ -11,7 +11,6 @@ function App() {
     <React.Fragment>
        <HomePage/> 
       {/* <ProductDetailsPage /> */}
-    
     </React.Fragment>
 
 

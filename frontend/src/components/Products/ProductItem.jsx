@@ -1,22 +1,28 @@
 
+import { useContext } from "react";
 import "./ProductItem.css";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import CardContext from '../../context/CardProvider'
 const ProductItem = ({ productItem, setCardItems }) => {
-  
-    const addToCard =(productItem)=>{
-        setCardItems((prevItems)=> [...prevItems,productItem]);
+    const { productname } = useContext(CardContext);
+    const addToCard = (productItem) => {
+        setCardItems((prevItems) => [...prevItems, productItem]);
     }
-    
+
     return (
         <li className="product-item glide__slide glide__slide--active" >
             <div className="product-image">
                 <a href="#">
-                <img src={productItem.img.singleImage} alt="" className="img1" />
-                <img src={productItem.img.thumbs[1]} alt="" className="img2" />
+                    <img src={productItem.img.singleImage} alt="" className="img1" />
+                    <img src={productItem.img.thumbs[1]} alt="" className="img2" />
                 </a>
             </div>
             <div className="product-info">
-                <a href="$" className="product-title"> {productItem.name}</a>
+                <a href="$" className="product-title">
+                    {productItem.name}
+                    <br />
+                    {/* Data: {name} */}
+                </a>
                 <ul className="product-star">
                     <li>
                         <i className="bi bi-star-fill"></i>
@@ -40,7 +46,7 @@ const ProductItem = ({ productItem, setCardItems }) => {
                 </div>
                 <span className="product-discount">-  -{productItem.discount}%</span>
                 <div className="product-links">
-                    <button className="add-to-cart" data-id="1" onClick={()=>addToCard(productItem)}>
+                    <button className="add-to-cart" data-id="1" onClick={() => addToCard(productItem)}>
                         <i className="bi bi-basket-fill"></i>
                     </button>
                     <button>
