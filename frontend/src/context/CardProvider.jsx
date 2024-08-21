@@ -11,16 +11,25 @@ const CardProvider = ({ children }) => {
   );
   useEffect(() => {
 
-    localStorage.setItem("carItems", JSON.stringify(cartItems));
+    localStorage.setItem("cardItems", JSON.stringify(cartItems));
 
   }, [cartItems]);
   const addToCard = (productItem) => {
     setCardItems((prevItems) => [...prevItems, productItem]);
   }
+
+  const removeFromCard =(itemId) =>{
+    const filteredCardItems =   cartItems.filter((cadritem)=>{
+      return cadritem.id!==itemId;
+    })
+    setCardItems(filteredCardItems)
+  }
+
   return (
     <CardContext.Provider
       value={{
         addToCard,
+        removeFromCard,
         cartItems
       }}
     >

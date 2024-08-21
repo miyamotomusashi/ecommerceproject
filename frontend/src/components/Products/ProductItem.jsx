@@ -4,8 +4,13 @@ import "./ProductItem.css";
 import PropTypes from 'prop-types';
 import { CardContext } from '../../context/CardProvider'
 const ProductItem = ({ productItem }) => {
-    const {addToCard} = useContext(CardContext);   
+    const { cardItems,addToCard } = useContext(CardContext);   
 
+    const filteredCard = cardItems?.find(
+        (cardItem) => cardItem.id === productItem.id
+    );
+
+    
     return (
         <li className="product-item glide__slide glide__slide--active" >
             <div className="product-image">
@@ -41,7 +46,9 @@ const ProductItem = ({ productItem }) => {
                 </div>
                 <span className="product-discount">-  -{productItem.discount}%</span>
                 <div className="product-links">
-                    <button className="add-to-cart" data-id="1" onClick={() => addToCard(productItem)}>
+                    <button className="add-to-cart" data-id="1" onClick={() => addToCard(productItem)}
+                        disabled={filteredCard}
+                        >
                         <i className="bi bi-basket-fill"></i>
                     </button>
                     <button>

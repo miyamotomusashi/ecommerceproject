@@ -1,7 +1,7 @@
 import ProductItem from "./ProductItem";
 import "./Products.css";
 import PropTypes from 'prop-types'
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import ProductsData from "../../data.json";
 
 
