@@ -3,9 +3,11 @@ import { useContext } from "react";
 import "./ProductItem.css";
 import PropTypes from 'prop-types';
 import { CardContext } from '../../context/CardProvider'
+import { Link, useNavigate } from "react-router-dom";
 const ProductItem = ({ productItem }) => {
     const { cardItems,addToCard } = useContext(CardContext);   
 
+    const navigate = useNavigate();
     const filteredCard = cardItems?.find(
         (cardItem) => cardItem.id === productItem.id
     );
@@ -54,9 +56,9 @@ const ProductItem = ({ productItem }) => {
                     <button>
                         <i className="bi bi-heart-fill"></i>
                     </button>
-                    <a href="#" className="product-link" data-id="1">
+                    <Link to={`product/${productItem.id}`} className="product-link" data-id="1">
                         <i className="bi bi-eye-fill"></i>
-                    </a>
+                    </Link>
                     <a href="#">
                         <i className="bi bi-share-fill"></i>
                     </a>
