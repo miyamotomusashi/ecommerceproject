@@ -3,11 +3,10 @@ import { useContext } from "react";
 import "./ProductItem.css";
 import PropTypes from 'prop-types';
 import { CardContext } from '../../context/CardProvider'
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const ProductItem = ({ productItem }) => {
     const { cardItems,addToCard } = useContext(CardContext);   
 
-    const navigate = useNavigate();
     const filteredCard = cardItems?.find(
         (cardItem) => cardItem.id === productItem.id
     );

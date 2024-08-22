@@ -1,12 +1,9 @@
-//import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
-import React from "react";
+
 import "./App.css";
 
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
-import CardPage from "./pages/CardPage";
+// import CardPage from "./pages/CardPage";
 import ShopPage from "./pages/ShopPage";
 import BlogPage from "./pages/BlogPage";
 import AuthPage from "./pages/AuthPage";
